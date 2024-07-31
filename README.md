@@ -47,6 +47,8 @@ Arguments:
 
 ### Example Usage in Colab
 
+Link👉 [Google Colab](https://colab.research.google.com/drive/1Udy-rfNUtSZSVfG0gtq7CDoSv6PjqiuL?usp=sharing)
+
 ```sh
 # Clone the DL-ROM GitHub repository
 !git clone https://github.com/Shen-Ming-Hong/DL-ROM.git
