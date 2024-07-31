@@ -23,19 +23,35 @@ import cv2
 """
 Example Usage in colab:
 initializing:
-%cd DL-ROM/code/
+```
+# Clone the DL-ROM GitHub repository
+!git clone https://github.com/Shen-Ming-Hong/DL-ROM.git
+
+# Change directory to the cloned DL-ROM directory
+%cd DL-ROM/
+
+# List the contents of the current directory
 !ls
 
-For Training:
+# Download the dataset from the specified Google Drive folder into the 'data' directory
+!gdown --folder https://drive.google.com/drive/folders/1JI4jTBM1vE9AjkdxYce0GCDG9tCi5FtQ -O data
+
+# List the contents of the 'data' directory to confirm the download
+!ls data
+
+# Change directory to the 'code' folder within the DL-ROM directory
+%cd code/
+```
+# For Training:
 !python main.py -N 100 -B 16 -d_set 2d_cylinder_CFD --train
 
-For Testing:
+# For Testing:
 !python main.py --test -test_epoch 100 -d_set 2d_cylinder_CFD
 
-For Transfer Learning:
+# For Transfer Learning:
 !python main.py --transfer -N 100 -B 16 -d_set 2d_cylinder_CFD --train
 
-For Simulating:
+# For Simulating:
 !python main.py --simulate -test_epoch 100 -d_set 2d_cylinder_CFD
 
 """
