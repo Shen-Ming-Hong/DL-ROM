@@ -242,7 +242,7 @@ if __name__ == "__main__":
         # Epoch loop
         for epoch in range(num_epochs):
             start_time = time.time()
-            print("Epoch no: ", epoch)
+            print("Epoch no: ", epoch + 1)
             train_loss = training(model, train_loader, criterion, optimizer)
 
             # Saving weights after every 20epochs
@@ -255,7 +255,7 @@ if __name__ == "__main__":
                 Train_loss[epoch] = train_loss
 
             if epoch % 10 == 0:  # and epoch != 0:
-                path = f"../results/{dataset_name}/weights/{epoch}.pth"
+                path = f"../results/{dataset_name}/weights/{epoch+1}.pth"
                 torch.save(model.state_dict(), path)
                 print(optimizer)
 
